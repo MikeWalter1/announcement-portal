@@ -6,6 +6,9 @@
 <div class="row">
   <div class="collumn col-4">
   <nb-card>
+    <nb-card-header>
+      Wählen Sie eine Ausschreibung aus
+    </nb-card-header>
     <nb-card-body>
       <ul>
         <button class="btn btn-hero-info btn-demo col-12"
@@ -21,7 +24,7 @@
 
 <div class="collumn col-8">
   <nb-card>
-    <nb-card-body>
+    <nb-card-body *ngIf="selectedAnnouncement!=null">
       <h1>Beschreibung: {{selectedAnnouncement.Description}}</h1>
       <h3>Art der Bekanntmachung: {{selectedAnnouncement.AnnouncementType}}</h3>
       <h3>Datum der Publikation: {{selectedAnnouncement.PublicationDate}}</h3>
@@ -33,7 +36,7 @@
       <h3>PLZ: {{selectedAnnouncement.PostalCode}}</h3>
       <h3>Telefon: {{selectedAnnouncement.PhoneNumber}}</h3>
       <h3>Email: {{selectedAnnouncement.Email}}</h3>
-      <h3>Webseite: {{selectedAnnouncement.Website}}</h3>
+      <!-- <h3>Webseite: {{selectedAnnouncement.Website}}</h3> -->
       <hr>
       <h3>Komplette Ausschreibung:</h3>
       <div style="white-space: pre-wrap;">
