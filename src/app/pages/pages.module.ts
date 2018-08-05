@@ -15,6 +15,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 // for AngularFireAuth
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { NewLoginComponent } from './new-login-component/new-login-component.component';
 
 
 const PAGES_COMPONENTS = [
@@ -33,6 +34,7 @@ const PAGES_COMPONENTS = [
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    NewLoginComponent,
   ],
 })
 export class PagesModule {

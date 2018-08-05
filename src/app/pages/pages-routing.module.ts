@@ -1,3 +1,4 @@
+import { NewLoginComponent } from './new-login-component/new-login-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -13,8 +14,12 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
+      path: 'login',
+      component: NewLoginComponent,
+    },
+    {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'login',
       pathMatch: 'full',
     },
   ],
