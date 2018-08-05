@@ -25,6 +25,7 @@
 <div class="collumn col-8">
   <nb-card>
     <nb-card-body *ngIf="selectedAnnouncement!=null">
+      <a href="{{selectedAnnouncement.UrlLink}}">Link: {{selectedAnnouncement.UrlLink}}</a>
       <h1>Beschreibung: {{selectedAnnouncement.Description}}</h1>
       <h3>Art der Bekanntmachung: {{selectedAnnouncement.AnnouncementType}}</h3>
       <h3>Datum der Publikation: {{selectedAnnouncement.PublicationDate}}</h3>
