@@ -1,0 +1,46 @@
+<!-- <div class="row">
+  <nb-card>
+    <nb-card-body>Hello from ngx-admin sandbox project.</nb-card-body>
+  </nb-card>
+</div> -->
+<div class="row">
+  <div class="collumn col-4">
+  <nb-card>
+    <nb-card-body>
+      <ul>
+        <button class="btn btn-hero-info btn-demo col-12"
+        (click)="this.selectedAnnouncement=announcement"
+        style="margin-top:5px;"
+        *ngFor="let announcement of announcements | async">
+        {{announcement.Description}}
+      </button>
+      </ul>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<div class="collumn col-8">
+  <nb-card>
+    <nb-card-body>
+      <h1>Beschreibung: {{selectedAnnouncement.Description}}</h1>
+      <h3>Art der Bekanntmachung: {{selectedAnnouncement.AnnouncementType}}</h3>
+      <h3>Datum der Publikation: {{selectedAnnouncement.PublicationDate}}</h3>
+      <h3>Frist: {{selectedAnnouncement.Deadline}}</h3>
+      <h3>Referenznummer: {{selectedAnnouncement.ReferenceNumberOfAnnouncement}}</h3>
+      <h3>Unternehmen: {{selectedAnnouncement.CompanyName}}</h3>
+      <h3>Straße: {{selectedAnnouncement.Street}}</h3>
+      <h3>Stadt: {{selectedAnnouncement.City}}</h3>
+      <h3>PLZ: {{selectedAnnouncement.PostalCode}}</h3>
+      <h3>Telefon: {{selectedAnnouncement.PhoneNumber}}</h3>
+      <h3>Email: {{selectedAnnouncement.Email}}</h3>
+      <h3>Webseite: {{selectedAnnouncement.Website}}</h3>
+      <hr>
+      <h3>Komplette Ausschreibung:</h3>
+      <div style="white-space: pre-wrap;">
+        {{selectedAnnouncement.DocumentBody}}
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>
+</div>
+
