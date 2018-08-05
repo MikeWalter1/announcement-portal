@@ -1,0 +1,59 @@
+<nb-card>
+  <nb-card-body>
+    <div class="flex-centered col-xl-4 col-lg-6 col-md-8 col-sm-12" style="margin: auto;">
+    <h2 class="title">RPA-Demonstration für TED</h2>
+    <small class="form-text sub-title">Melden Sie sich mit Ihrem Benutzernamen und Passwort an</small>
+
+    <form (ngSubmit)="login()" #form="ngForm" autocomplete="nope">
+      <div class="form-group">
+        <label for="input-email" class="sr-only">Email address</label>
+        <input nbInput
+               class="form-control"
+               [(ngModel)]="user.email"
+               #email="ngModel"
+               name="email"
+               id="input-email"
+               placeholder="Benutzername"
+               autofocus
+               fullWidth>
+        <small class="form-text error" *ngIf="email.invalid && email.touched">
+          Email is required!
+        </small>
+        <small class="form-text error"
+               *ngIf="email.invalid && email.touched">
+          Email should be the real one!
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="input-password" class="sr-only">Password</label>
+        <input nbInput
+               class="form-control"
+               [(ngModel)]="user.password"
+               #password="ngModel"
+               name="password"
+               type="password"
+               id="input-password"
+               placeholder="Passwort"
+               fullWidth>
+        <small class="form-text error" *ngIf="password.invalid && password.touched">
+          Password is required!
+        </small>
+        <small
+          class="form-text error"
+          *ngIf="password.invalid && password.touched">
+        </small>
+      </div>
+
+      <button nbButton
+              class="btn btn-hero-success btn-demo col-12"
+              status="success"
+              fullWidth
+              [disabled]="submitted || !form.valid"
+              [class.btn-pulse]="submitted">
+        Anmelden
+      </button>
+    </form>
+  </div>
+  </nb-card-body>
+  </nb-card>
